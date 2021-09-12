@@ -1,2 +1,2 @@
 # Complete Python Learing Exercises
-    We be added lession-wise
+    Will be added lession-wise
