@@ -1,0 +1,2 @@
+To create file from termila in windows type :
+   type nul > ex1.py
