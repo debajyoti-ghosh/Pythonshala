@@ -10,7 +10,7 @@ I have defined the test name in two different places in the previous example. It
 actually in two different scopes. One is the global scope (test = 0), and the other is
 the local scope of the my_function function (test = 1). If you execute the code,
 you'll see this:
-    $ python scoping.level.1.py
+# C:\Users\Papai\Documents\git\Pythonshala> python scoping.level.1.py
     my_function: 1
     global: 0
 It's clear that test = 1 shadows the test = 0 assignment in my_function. In the
@@ -24,9 +24,13 @@ local, enclosing, global, built-in described in Chapter 1, A Gentle Introduction
 Python) and, in this case, we will see the value 0 printed twice. Try it in your code.
 Now, let's raise the stakes here and level up:
 # scoping.level.2.py
-def outer():
- test = 1 # outer scope
- def inner():
- test = 2 # inner scope
- print('inner:', test)
- inner()
+    def outer():
+        test = 1 # outer scope
+        def inner():
+            test = 2 # inner scope
+            print('inner:', test)
+        inner()
+        print('outer:', test)
+    test = 0 # global scope
+    outer()
+    print('global:', test)
